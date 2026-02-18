@@ -1,0 +1,68 @@
+<Window x:Class="ARM_library.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="АРМ-библиотека" Height="720" Width="1100" WindowStartupLocation="CenterScreen">
+    <TabControl Margin="12">
+        <TabItem Header="Книги">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,8">
+                    <Button Content="Добавить" Width="100" Margin="0,0,8,0" Click="Books_Add_Click"/>
+                    <Button Content="Изменить" Width="100" Margin="0,0,8,0" Click="Books_Edit_Click"/>
+                    <Button Content="Удалить" Width="100" Margin="0,0,8,0" Click="Books_Delete_Click"/>
+                    <Button Content="Сохранить" Width="100" Margin="0,0,8,0" Click="Books_Save_Click"/>
+                    <Button Content="Обновить форму" Width="120" Margin="0,0,8,0" Click="Books_Refresh_Click"/>
+                    <Button Content="Экспорт в Excel" Width="120" Margin="0,0,8,0" Click="Books_Export_Click"/>
+                    <TextBlock Text="Поиск:" VerticalAlignment="Center" Margin="16,0,8,0"/>
+                    <TextBox x:Name="BooksSearchBox" Width="200" Height="26" TextChanged="BooksSearch_TextChanged"/>
+                </StackPanel>
+                <DataGrid x:Name="BooksGrid" AutoGenerateColumns="True" IsReadOnly="True"/>
+            </DockPanel>
+        </TabItem>
+        <TabItem Header="Читатели">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,8">
+                    <Button Content="Добавить" Width="100" Margin="0,0,8,0" Click="Readers_Add_Click"/>
+                    <Button Content="Изменить" Width="100" Margin="0,0,8,0" Click="Readers_Edit_Click"/>
+                    <Button Content="Удалить" Width="100" Margin="0,0,8,0" Click="Readers_Delete_Click"/>
+                    <Button Content="Сохранить" Width="100" Margin="0,0,8,0" Click="Readers_Save_Click"/>
+                    <Button Content="Обновить форму" Width="120" Margin="0,0,8,0" Click="Readers_Refresh_Click"/>
+                    <Button Content="Экспорт в Excel" Width="120" Margin="0,0,8,0" Click="Readers_Export_Click"/>
+                    <TextBlock Text="Поиск:" VerticalAlignment="Center" Margin="16,0,8,0"/>
+                    <TextBox x:Name="ReadersSearchBox" Width="200" Height="26" TextChanged="ReadersSearch_TextChanged"/>
+                </StackPanel>
+                <DataGrid x:Name="ReadersGrid" AutoGenerateColumns="True" IsReadOnly="True"/>
+            </DockPanel>
+        </TabItem>
+        <TabItem Header="Выдачи/Возвраты">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,8">
+                    <Button Content="Добавить" Width="100" Margin="0,0,8,0" Click="Issues_Issue_Click"/>
+                    <Button Content="Изменить" Width="100" Margin="0,0,8,0" Click="Issues_Edit_Click"/>
+                    <Button Content="Удалить" Width="100" Margin="0,0,8,0" Click="Issues_Delete_Click"/>
+                    <Button Content="Сохранить" Width="100" Margin="0,0,8,0" Click="Issues_Save_Click"/>
+                    <Button Content="Обновить форму" Width="120" Margin="0,0,8,0" Click="Issues_Refresh_Click"/>
+                    <Button Content="Вернуть" Width="80" Margin="0,0,8,0" Click="Issues_Return_Click"/>
+                    <Button Content="Экспорт в Excel" Width="120" Margin="0,0,8,0" Click="Issues_Export_Click"/>
+                    <TextBlock Text="Поиск:" VerticalAlignment="Center" Margin="16,0,8,0"/>
+                    <TextBox x:Name="IssuesSearchBox" Width="150" Height="26" TextChanged="IssuesSearch_TextChanged"/>
+                </StackPanel>
+                <DataGrid x:Name="IssuesGrid" AutoGenerateColumns="True" IsReadOnly="True"/>
+            </DockPanel>
+        </TabItem>
+        <TabItem Header="Сотрудники">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,8">
+                    <Button Content="Добавить" Width="100" Margin="0,0,8,0" Click="Employees_Add_Click"/>
+                    <Button Content="Изменить" Width="100" Margin="0,0,8,0" Click="Employees_Edit_Click"/>
+                    <Button Content="Удалить" Width="100" Margin="0,0,8,0" Click="Employees_Delete_Click"/>
+                    <Button Content="Сохранить" Width="100" Margin="0,0,8,0" Click="Employees_Save_Click"/>
+                    <Button Content="Обновить форму" Width="120" Margin="0,0,8,0" Click="Employees_Refresh_Click"/>
+                    <Button Content="Экспорт в Excel" Width="120" Margin="0,0,8,0" Click="Employees_Export_Click"/>
+                    <TextBlock Text="Поиск:" VerticalAlignment="Center" Margin="16,0,8,0"/>
+                    <TextBox x:Name="EmployeesSearchBox" Width="200" Height="26" TextChanged="EmployeesSearch_TextChanged"/>
+                </StackPanel>
+                <DataGrid x:Name="EmployeesGrid" AutoGenerateColumns="True" IsReadOnly="True"/>
+            </DockPanel>
+        </TabItem>
+    </TabControl>
+</Window>
